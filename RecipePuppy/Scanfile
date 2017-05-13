@@ -1,0 +1,4 @@
+devices ["iPhone 7", "iPad Air 2"]
+open_report true
+output_types "html"
+scheme "RecipePuppy"
