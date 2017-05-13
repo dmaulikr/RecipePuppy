@@ -553,17 +553,17 @@
         // Options for rule: Recommended project settings
         "BasicProjectSettings": {
             // The indentation type that should be set ("tabs" / "spaces")
-            //"indentType": null
+            //"indentType": null,
             // The ‘tab width’ that should be set (Positive integer)
-            //"tabWidth": null
+            //"tabWidth": null,
             // The ‘indent width’ that should be set (Positive integer)
-            //"indentWidth": null
+            //"indentWidth": null,
             // Whether the ‘wrap lines’ setting should be set or not ("wrap" /
             // "nowrap")
-            //"wrapLines": null
+            //"wrapLines": null,
             // Whether the ‘class prefix’ project setting should have a value
             // (Boolean)
-            //"expectClassPrefix": true
+            "expectClassPrefix": false
             // Regexes for ignored file paths (Array of regular expression
             // strings)
             //"ignoredFileRegexes": null
