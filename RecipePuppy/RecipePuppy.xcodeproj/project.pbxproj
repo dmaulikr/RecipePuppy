@@ -605,6 +605,7 @@
 			baseConfigurationReference = A47BCF8F436E9B8F8E4653E9 /* Pods-RecipePuppy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2798U5523H;
 				INFOPLIST_FILE = RecipePuppy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -619,6 +620,7 @@
 			baseConfigurationReference = 70094ACB94A3DEE15EDDCFFD /* Pods-RecipePuppy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 2798U5523H;
 				INFOPLIST_FILE = RecipePuppy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
