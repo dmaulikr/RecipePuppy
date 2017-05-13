@@ -12,9 +12,7 @@
 		3C79A55CAA72C4DCA677366E /* Pods_RecipePuppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D0DE0160D982C4485C8443 /* Pods_RecipePuppy.framework */; };
 		8356F87E1EC763EC00663F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F87D1EC763EC00663F7B /* AppDelegate.swift */; };
 		8356F8801EC763EC00663F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F87F1EC763EC00663F7B /* ViewController.swift */; };
-		8356F8831EC763EC00663F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8356F8811EC763EC00663F7B /* Main.storyboard */; };
 		8356F8851EC763EC00663F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8356F8841EC763EC00663F7B /* Assets.xcassets */; };
-		8356F8881EC763EC00663F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8356F8861EC763EC00663F7B /* LaunchScreen.storyboard */; };
 		8356F8931EC763ED00663F7B /* RecipePuppyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8921EC763ED00663F7B /* RecipePuppyTests.swift */; };
 		8356F89E1EC763ED00663F7B /* RecipePuppyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F89D1EC763ED00663F7B /* RecipePuppyUITests.swift */; };
 /* End PBXBuildFile section */
@@ -43,9 +41,7 @@
 		8356F87A1EC763EC00663F7B /* RecipePuppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipePuppy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8356F87D1EC763EC00663F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8356F87F1EC763EC00663F7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8356F8821EC763EC00663F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8356F8841EC763EC00663F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8356F8871EC763EC00663F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8356F8891EC763EC00663F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8356F88E1EC763ED00663F7B /* RecipePuppyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePuppyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8356F8921EC763ED00663F7B /* RecipePuppyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyTests.swift; sourceTree = "<group>"; };
@@ -125,11 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				8356F87D1EC763EC00663F7B /* AppDelegate.swift */,
-				8356F87F1EC763EC00663F7B /* ViewController.swift */,
-				8356F8811EC763EC00663F7B /* Main.storyboard */,
 				8356F8841EC763EC00663F7B /* Assets.xcassets */,
-				8356F8861EC763EC00663F7B /* LaunchScreen.storyboard */,
 				8356F8891EC763EC00663F7B /* Info.plist */,
+				8356F87F1EC763EC00663F7B /* ViewController.swift */,
 			);
 			path = RecipePuppy;
 			sourceTree = "<group>";
@@ -137,8 +131,8 @@
 		8356F8911EC763ED00663F7B /* RecipePuppyTests */ = {
 			isa = PBXGroup;
 			children = (
-				8356F8921EC763ED00663F7B /* RecipePuppyTests.swift */,
 				8356F8941EC763ED00663F7B /* Info.plist */,
+				8356F8921EC763ED00663F7B /* RecipePuppyTests.swift */,
 			);
 			path = RecipePuppyTests;
 			sourceTree = "<group>";
@@ -146,8 +140,8 @@
 		8356F89C1EC763ED00663F7B /* RecipePuppyUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8356F89D1EC763ED00663F7B /* RecipePuppyUITests.swift */,
 				8356F89F1EC763ED00663F7B /* Info.plist */,
+				8356F89D1EC763ED00663F7B /* RecipePuppyUITests.swift */,
 			);
 			path = RecipePuppyUITests;
 			sourceTree = "<group>";
@@ -286,9 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8356F8881EC763EC00663F7B /* LaunchScreen.storyboard in Resources */,
 				8356F8851EC763EC00663F7B /* Assets.xcassets in Resources */,
-				8356F8831EC763EC00663F7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,25 +505,6 @@
 			targetProxy = 8356F89A1EC763ED00663F7B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		8356F8811EC763EC00663F7B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8356F8821EC763EC00663F7B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8356F8861EC763EC00663F7B /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8356F8871EC763EC00663F7B /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8356F8A01EC763ED00663F7B /* Debug */ = {
