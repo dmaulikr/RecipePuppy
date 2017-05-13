@@ -11,7 +11,7 @@
 		248DB4CB047C649E3483F621 /* Pods_RecipePuppyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43B1523B6426060DB44735E /* Pods_RecipePuppyUITests.framework */; };
 		3C79A55CAA72C4DCA677366E /* Pods_RecipePuppy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D0DE0160D982C4485C8443 /* Pods_RecipePuppy.framework */; };
 		8356F87E1EC763EC00663F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F87D1EC763EC00663F7B /* AppDelegate.swift */; };
-		8356F8801EC763EC00663F7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F87F1EC763EC00663F7B /* ViewController.swift */; };
+		8356F8801EC763EC00663F7B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F87F1EC763EC00663F7B /* RootViewController.swift */; };
 		8356F8851EC763EC00663F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8356F8841EC763EC00663F7B /* Assets.xcassets */; };
 		8356F8931EC763ED00663F7B /* RecipePuppyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8921EC763ED00663F7B /* RecipePuppyTests.swift */; };
 		8356F89E1EC763ED00663F7B /* RecipePuppyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F89D1EC763ED00663F7B /* RecipePuppyUITests.swift */; };
@@ -40,7 +40,7 @@
 		70094ACB94A3DEE15EDDCFFD /* Pods-RecipePuppy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppy.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.release.xcconfig"; sourceTree = "<group>"; };
 		8356F87A1EC763EC00663F7B /* RecipePuppy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipePuppy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8356F87D1EC763EC00663F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8356F87F1EC763EC00663F7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8356F87F1EC763EC00663F7B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		8356F8841EC763EC00663F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8356F8891EC763EC00663F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8356F88E1EC763ED00663F7B /* RecipePuppyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePuppyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +123,7 @@
 				8356F87D1EC763EC00663F7B /* AppDelegate.swift */,
 				8356F8841EC763EC00663F7B /* Assets.xcassets */,
 				8356F8891EC763EC00663F7B /* Info.plist */,
-				8356F87F1EC763EC00663F7B /* ViewController.swift */,
+				8356F87F1EC763EC00663F7B /* RootViewController.swift */,
 			);
 			path = RecipePuppy;
 			sourceTree = "<group>";
@@ -470,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8356F8801EC763EC00663F7B /* ViewController.swift in Sources */,
+				8356F8801EC763EC00663F7B /* RootViewController.swift in Sources */,
 				8356F87E1EC763EC00663F7B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
