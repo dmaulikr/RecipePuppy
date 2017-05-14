@@ -1,4 +1,5 @@
 import Alamofire
+import AlamofireObjectMapper
 import UIKit
 
 class RootViewController: UITableViewController {
@@ -41,8 +42,9 @@ extension RootViewController {
 extension RootViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
-        Alamofire.request(Constants.baseUrl + searchController.searchBar.text!.trim()).responseJSON { response in
-            print(response)
+        let fullUrl = Constants.baseUrl + searchController.searchBar.text!.trim()
+        Alamofire.request(fullUrl).responseObject { (response: DataResponse<RecipePuppyResponse>) in
+            debugPrint(response)
         }
     }
 }
