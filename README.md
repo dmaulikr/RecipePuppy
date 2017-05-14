@@ -1,6 +1,6 @@
-# RecipeFinder
+# RecipePuppy
 
-A recipe finder app using the [RecipePuppy API](http://www.recipepuppy.com/about/api/).
+An app using the [RecipePuppy API](http://www.recipepuppy.com/about/api/).
 
 ## Notes
 
