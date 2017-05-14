@@ -3,6 +3,7 @@ use_frameworks!
 
 target 'RecipePuppy' do
   pod 'Alamofire'
+  pod 'AlamofireNetworkActivityIndicator'
   pod 'AlamofireObjectMapper'
   pod 'SwiftLint'
 

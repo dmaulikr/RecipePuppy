@@ -1,5 +1,7 @@
 PODS:
   - Alamofire (4.4.0)
+  - AlamofireNetworkActivityIndicator (2.1.0):
+    - Alamofire (~> 4.1)
   - AlamofireObjectMapper (4.1.0):
     - Alamofire (~> 4.1)
     - ObjectMapper (~> 2.0)
@@ -8,15 +10,17 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - AlamofireNetworkActivityIndicator
   - AlamofireObjectMapper
   - SwiftLint
 
 SPEC CHECKSUMS:
   Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireNetworkActivityIndicator: 4716f6554bdfb9c7cf13b1e0e3af21163129690a
   AlamofireObjectMapper: 435adc82f5b367679bd9e71c4974a54efd0b2521
   ObjectMapper: fb30f71e08470d1e5a20b199fafe1246281db898
   SwiftLint: b467d08f5b25dc3b3cfed243d8e1b74b91714c67
 
-PODFILE CHECKSUM: 36f3ddfd28ed52124ba3a35e923f5504b7cb6643
+PODFILE CHECKSUM: fc59270144ee34907fcb85c9b1c55de3d516b011
 
 COCOAPODS: 1.2.1
