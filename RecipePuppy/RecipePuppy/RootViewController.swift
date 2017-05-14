@@ -48,6 +48,7 @@ extension RootViewController: UISearchResultsUpdating {
         RecipePuppyRequest.fetch(searchCriteria) { (recipes: [Recipe]?, error: Error?) in
             if error != nil {
                 self.presentAlert(title: Bundle.displayName(), message: (error?.localizedDescription)!)
+                self.recipes = []
             } else {
                 self.recipes = recipes!
                 self.tableView.reloadData()
