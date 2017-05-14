@@ -15,6 +15,8 @@
 		8356F8851EC763EC00663F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8356F8841EC763EC00663F7B /* Assets.xcassets */; };
 		8356F8931EC763ED00663F7B /* RecipePuppyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8921EC763ED00663F7B /* RecipePuppyTests.swift */; };
 		8356F89E1EC763ED00663F7B /* RecipePuppyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F89D1EC763ED00663F7B /* RecipePuppyUITests.swift */; };
+		8356F8B01EC84A3B00663F7B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8AF1EC84A3B00663F7B /* Constants.swift */; };
+		8356F8B21EC84D6800663F7B /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8356F8B11EC84D6800663F7B /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8356F8991EC763ED00663F7B /* RecipePuppyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipePuppyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8356F89D1EC763ED00663F7B /* RecipePuppyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePuppyUITests.swift; sourceTree = "<group>"; };
 		8356F89F1EC763ED00663F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8356F8AF1EC84A3B00663F7B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8356F8B11EC84D6800663F7B /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		8E78711B1E1820EC32FB7999 /* Pods-RecipePuppyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppyTests/Pods-RecipePuppyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A47BCF8F436E9B8F8E4653E9 /* Pods-RecipePuppy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppy/Pods-RecipePuppy.debug.xcconfig"; sourceTree = "<group>"; };
 		B52E78FFEEDB1156451A9B5D /* Pods-RecipePuppyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecipePuppyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecipePuppyUITests/Pods-RecipePuppyUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 			children = (
 				8356F87D1EC763EC00663F7B /* AppDelegate.swift */,
 				8356F8841EC763EC00663F7B /* Assets.xcassets */,
+				8356F8AF1EC84A3B00663F7B /* Constants.swift */,
+				8356F8B11EC84D6800663F7B /* Helpers.swift */,
 				8356F8891EC763EC00663F7B /* Info.plist */,
 				8356F87F1EC763EC00663F7B /* RootViewController.swift */,
 			);
@@ -472,6 +478,8 @@
 			files = (
 				8356F8801EC763EC00663F7B /* RootViewController.swift in Sources */,
 				8356F87E1EC763EC00663F7B /* AppDelegate.swift in Sources */,
+				8356F8B01EC84A3B00663F7B /* Constants.swift in Sources */,
+				8356F8B21EC84D6800663F7B /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

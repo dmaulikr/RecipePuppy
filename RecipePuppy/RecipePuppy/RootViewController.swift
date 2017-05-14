@@ -1,3 +1,4 @@
+import Alamofire
 import UIKit
 
 class RootViewController: UITableViewController {
@@ -40,7 +41,9 @@ extension RootViewController {
 extension RootViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
-        print(searchController.searchBar.text! as String)
+        Alamofire.request(Constants.baseUrl + searchController.searchBar.text!.trim()).responseJSON { response in
+            print(response)
+        }
     }
 }
 
