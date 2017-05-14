@@ -1,5 +1,3 @@
-import Alamofire
-import AlamofireObjectMapper
 import UIKit
 
 class RootViewController: UITableViewController {
@@ -46,20 +44,14 @@ extension RootViewController {
 extension RootViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
-        let fullUrl = Constants.baseUrl + searchController.searchBar.text!.trim()
-        Alamofire
-            .request(fullUrl)
-            .validate(statusCode: 200...200)
-            .validate(contentType: ["text/javascript"])
-            .responseObject { (response: DataResponse<RecipePuppyResponse>) in
-                switch response.result {
-                case .success:
-                    let recipePuppyResponse = response.result.value
-                    self.recipes = (recipePuppyResponse?.recipes)!
-                    self.tableView.reloadData()
-                case .failure(let error):
-                    self.presentAlert(title: Bundle.displayName(), message: error.localizedDescription)
-                }
+        let searchCriteria = searchController.searchBar.text!.trim()
+        RecipePuppyRequest.fetch(searchCriteria) { (recipes: [Recipe]?, error: Error?) in
+            if error != nil {
+                self.presentAlert(title: Bundle.displayName(), message: (error?.localizedDescription)!)
+            } else {
+                self.recipes = recipes!
+                self.tableView.reloadData()
             }
+        }
     }
 }
