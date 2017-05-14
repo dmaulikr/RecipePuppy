@@ -13,7 +13,7 @@ class RootViewController: UITableViewController {
 
         tableView.tableHeaderView = searchController.searchBar
 
-        title = displayName()
+        title = Bundle.displayName()
     }
 }
 
@@ -46,14 +46,5 @@ extension RootViewController: UISearchResultsUpdating {
         Alamofire.request(fullUrl).responseObject { (response: DataResponse<RecipePuppyResponse>) in
             debugPrint(response)
         }
-    }
-}
-
-// MARK: - Helpers
-
-extension RootViewController {
-
-    func displayName() -> String {
-        return Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String // swiftlint:disable:this force_cast
     }
 }
