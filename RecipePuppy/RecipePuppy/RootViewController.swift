@@ -4,6 +4,8 @@ import UIKit
 
 class RootViewController: UITableViewController {
 
+    var recipes = [Recipe]()
+
     let searchController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
@@ -11,6 +13,7 @@ class RootViewController: UITableViewController {
 
         definesPresentationContext = true
 
+        searchController.dimsBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
 
         tableView.tableHeaderView = searchController.searchBar
@@ -24,14 +27,13 @@ class RootViewController: UITableViewController {
 extension RootViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell")
-        cell.detailTextLabel?.text = "detail text"
-        cell.textLabel?.text = "text label"
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        cell.textLabel?.text = recipes[indexPath.row].title
         return cell
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return recipes.count
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,10 +54,12 @@ extension RootViewController: UISearchResultsUpdating {
             .responseObject { (response: DataResponse<RecipePuppyResponse>) in
                 switch response.result {
                 case .success:
-                    debugPrint(response)
+                    let recipePuppyResponse = response.result.value
+                    self.recipes = (recipePuppyResponse?.recipes)!
+                    self.tableView.reloadData()
                 case .failure(let error):
                     self.presentAlert(title: Bundle.displayName(), message: error.localizedDescription)
                 }
-        }
+            }
     }
 }

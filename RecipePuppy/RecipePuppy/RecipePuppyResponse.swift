@@ -2,7 +2,7 @@ import ObjectMapper
 
 class RecipePuppyResponse: Mappable {
     var href: String?
-    var results: [Result]?
+    var recipes: [Recipe]?
     var title: String?
     var version: Double?
 
@@ -11,13 +11,13 @@ class RecipePuppyResponse: Mappable {
 
     func mapping(map: Map) {
         href <- map["href"]
-        results <- map["results"]
+        recipes <- map["results"]
         title <- map["title"]
         version <- map["version"]
     }
 }
 
-class Result: Mappable {
+class Recipe: Mappable {
     var href: String?
     var ingredients: String?
     var thumbnail: String?
