@@ -2,8 +2,14 @@ import UIKit
 
 class RootViewController: UITableViewController {
 
+    let searchController = UISearchController(searchResultsController: nil)
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        searchController.searchResultsUpdater = self
+
+        tableView.tableHeaderView = searchController.searchBar
 
         title = displayName()
     }
@@ -26,6 +32,15 @@ extension RootViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
+    }
+}
+
+// MARK: - UISearchResultsUpdating
+
+extension RootViewController: UISearchResultsUpdating {
+
+    func updateSearchResults(for searchController: UISearchController) {
+        print(searchController.searchBar.text! as String)
     }
 }
 
