@@ -9,6 +9,8 @@ class RootViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        definesPresentationContext = true
+
         searchController.searchResultsUpdater = self
 
         tableView.tableHeaderView = searchController.searchBar
@@ -43,8 +45,17 @@ extension RootViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
         let fullUrl = Constants.baseUrl + searchController.searchBar.text!.trim()
-        Alamofire.request(fullUrl).responseObject { (response: DataResponse<RecipePuppyResponse>) in
-            debugPrint(response)
+        Alamofire
+            .request(fullUrl)
+            .validate(statusCode: 200...200)
+            .validate(contentType: ["text/javascript"])
+            .responseObject { (response: DataResponse<RecipePuppyResponse>) in
+                switch response.result {
+                case .success:
+                    debugPrint(response)
+                case .failure(let error):
+                    self.presentAlert(title: Bundle.displayName(), message: error.localizedDescription)
+                }
         }
     }
 }

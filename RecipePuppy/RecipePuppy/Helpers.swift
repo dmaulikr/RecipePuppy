@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 extension Bundle {
 
@@ -11,5 +12,17 @@ extension String {
 
     func trim() -> String {
         return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
+}
+
+extension UIViewController {
+
+    func presentAlert(title: String, message: String) {
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
     }
 }
