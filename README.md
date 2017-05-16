@@ -72,6 +72,10 @@ Add unit tests.
 
 Add UI tests.
 
+Create micro-service to refactor the multi-fetch and provide a HTTPS end-point.
+
+Refactor app to use micro-service. This allows me to configure NSAppTransportSecurity to use only HTTPS. If also abstracts the multi-fetch processing away to the micro-service. In the real world, I'd expect to have iOS, Android and web apps, and maybe even a Windows Phone app. With the micro-service we only need to code/maintain the multi-fetch once, not once per platform. It also allows use to use techniques such as caching and logging. Obviously it's not as performant on the free platform I've chosen, but this can be addressed later.
+
 ## Todo
 
 As the project grows I'd expect some refactoring but, for this short working demonstrator, I'd rather not refactor prematurely. Other changes I'd consider might include increasing separation of concerns via dependency injection, string localisation, using RxSwift, and changes to the UI to inform the user that no matches have been found.
