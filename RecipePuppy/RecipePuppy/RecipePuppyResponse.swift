@@ -1,19 +1,13 @@
 import ObjectMapper
 
 class RecipePuppyResponse: Mappable {
-    var href: String?
     var recipes: [Recipe]?
-    var title: String?
-    var version: Double?
 
     required init?(map: Map) {
     }
 
     func mapping(map: Map) {
-        href <- map["href"]
-        recipes <- map["results"]
-        title <- map["title"]
-        version <- map["version"]
+        recipes <- map["recipes"]
     }
 }
 

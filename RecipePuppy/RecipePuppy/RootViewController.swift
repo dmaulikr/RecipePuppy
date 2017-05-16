@@ -1,3 +1,6 @@
+import Alamofire
+import AlamofireObjectMapper
+import ObjectMapper
 import UIKit
 
 class RootViewController: UITableViewController {
@@ -45,14 +48,29 @@ extension RootViewController: UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
         let searchCriteria = searchController.searchBar.text!.trim()
-        RecipePuppyRequest.fetch(searchCriteria) { (recipes: [Recipe]?, error: Error?) in
-            if error != nil {
-                self.presentAlert(title: Bundle.displayName(), message: (error?.localizedDescription)!)
-                self.recipes = []
-            } else {
-                self.recipes = recipes!
-                self.tableView.reloadData()
+
+        Alamofire.SessionManager.default.session.getTasksWithCompletionHandler {dataTasks, _, _ in
+            dataTasks.forEach {
+                $0.cancel()
             }
+        }
+
+        Alamofire
+            .request("\(Constants.baseUrl)\(searchCriteria)")
+            .validate(statusCode: 200...200)
+            .validate(contentType: ["application/json"])
+            .responseObject { (response: DataResponse<RecipePuppyResponse>) in
+                switch response.result {
+                case .success:
+                    self.recipes = (response.result.value?.recipes)!
+                    self.tableView.reloadData()
+                case .failure(let error):
+                    if error.localizedDescription != "cancelled" {
+                        self.presentAlert(title: Bundle.displayName(), message: error.localizedDescription)
+                        self.recipes = []
+                        self.tableView.reloadData()
+                    }
+                }
         }
     }
 }

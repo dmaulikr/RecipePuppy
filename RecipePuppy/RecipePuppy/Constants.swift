@@ -1,4 +1,4 @@
 struct Constants {
 
-    static let baseUrl = "http://www.recipepuppy.com/api/"
+    static let baseUrl = "https://recipepuppyserver.now.sh/"
 }
