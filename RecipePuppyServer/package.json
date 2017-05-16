@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "micro": "latest",
+    "microrouter": "latest",
+    "node-fetch": "latest"
+  },
+  "scripts": {
+    "alias": "now alias set <deployment id> recipepuppyserver",
+    "deploy": "now deploy",
+    "start": "micro index"
+  }
+}
