@@ -42,6 +42,18 @@ extension RootViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension RootViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        let href: String = recipes[indexPath.row].href!
+
+        pushWebView(href: href)
+    }
+}
+
 // MARK: - UISearchResultsUpdating
 
 extension RootViewController: UISearchResultsUpdating {

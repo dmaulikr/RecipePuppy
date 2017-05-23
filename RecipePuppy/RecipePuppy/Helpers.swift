@@ -25,4 +25,10 @@ extension UIViewController {
 
         present(alertController, animated: true, completion: nil)
     }
+
+    func pushWebView(href: String) {
+        let webViewController = WebViewController(href: href)
+
+        navigationController?.pushViewController(webViewController, animated: true)
+    }
 }
